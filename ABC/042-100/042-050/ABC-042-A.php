@@ -1,17 +1,17 @@
 <?php
 
-function getIntArray()
+function getIntList()
 {
     return array_map('intval', explode(' ', trim(fgets(STDIN))));
 }
 
 function main()
 {
-    $_abc = getIntArray();
+    $_abc = getIntList();
 
     sort($_abc);
 
-    echo $_abc === [5,5,7] ? 'YES' : 'NO';
+    echo $_abc === [5, 5, 7] ? 'YES' : 'NO';
 }
 
 main();

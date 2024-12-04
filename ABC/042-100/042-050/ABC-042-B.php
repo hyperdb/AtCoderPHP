@@ -3,21 +3,20 @@
 function getStringRow($_row_cnt)
 {
     $_buf = [];
-    for($_i = 0; $_i < $_row_cnt; $_i++)
-    {
+    for ($_i = 0; $_i < $_row_cnt; $_i++) {
         $_buf[] = trim(fgets(STDIN));
     }
     return $_buf;
 }
 
-function getIntArray()
+function getIntList()
 {
     return array_map('intval', explode(' ', trim(fgets(STDIN))));
 }
 
 function main()
 {
-    list($_N, $_L) = getIntArray();
+    list($_N, $_L) = getIntList();
     $_strings = getStringRow($_N);
 
     sort($_strings);
