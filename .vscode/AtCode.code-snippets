@@ -4,6 +4,11 @@
         "body": [
             "<?php",
             "",
+            "function output($$_str)",
+            "{",
+            "    echo $$_str . \"\\n\";",
+            "}",
+            "",
             "function main()",
             "{",
             "",
@@ -35,14 +40,14 @@
     "getStringRow": {
         "prefix": ":gsr",
         "body": [
-            "function getStringRow($_row_cnt)",
+            "function getStringRow($$_row_cnt)",
             "{",
-            "    $_buf = [];",
-            "    for($_i = 0; $_i < $_row_cnt; $_i++)",
+            "    $$_buf = [];",
+            "    for($$_i = 0; $$_i < $$_row_cnt; $$_i++)",
             "    {",
-            "        $_buf[] = trim(fgets(STDIN));",
+            "        $$_buf[] = trim(fgets(STDIN));",
             "    }",
-            "    return $_buf;",
+            "    return $$_buf;",
             "}",
             ""
         ],
@@ -50,14 +55,14 @@
     "getStringLitsRow": {
         "prefix": ":gslr",
         "body": [
-            "function getStringListRow($_row_cnt)",
+            "function getStringListRow($$_row_cnt)",
             "{",
-            "    $_buf = [];",
-            "    for($_i = 0; $_i < $_row_cnt; $_i++)",
+            "    $$_buf = [];",
+            "    for($$_i = 0; $$_i < $$_row_cnt; $$_i++)",
             "    {",
-            "        $_buf[] = explode(' ', trim(fgets(STDIN)));",
+            "        $$_buf[] = explode(' ', trim(fgets(STDIN)));",
             "    }",
-            "    return $_buf;",
+            "    return $$_buf;",
             "}",
             ""
         ],
@@ -85,14 +90,14 @@
     "getIntRow": {
         "prefix": ":gir",
         "body": [
-            "function getIntRow($_row_cnt)",
+            "function getIntRow($$_row_cnt)",
             "{",
-            "    $_buf = [];",
-            "    for($_i = 0; $_i < $_row_cnt; $_i++)",
+            "    $$_buf = [];",
+            "    for($$_i = 0; $$_i < $_row_cnt; $$_i++)",
             "    {",
-            "        $_buf[] = intval(trim(fgets(STDIN)));",
+            "        $$_buf[] = intval(trim(fgets(STDIN)));",
             "    }",
-            "    return $_buf;",
+            "    return $$_buf;",
             "}",
             ""
         ],
@@ -100,14 +105,14 @@
     "getIntListRow": {
         "prefix": ":gilr",
         "body": [
-            "function getIntListRow($_row_cnt)",
+            "function getIntListRow($$_row_cnt)",
             "{",
-            "    $_buf = [];",
-            "    for($_i = 0; $_i < $_row_cnt; $_i++)",
+            "    $$_buf = [];",
+            "    for($$_i = 0; $$_i < $$_row_cnt; $$_i++)",
             "    {",
-            "        $_buf[] = array_map('intval', explode(' ', trim(fgets(STDIN))));",
+            "        $$_buf[] = array_map('intval', explode(' ', trim(fgets(STDIN))));",
             "    }",
-            "    return $_buf;",
+            "    return $$_buf;",
             "}",
             ""
         ],
