@@ -14,6 +14,11 @@ function getIntList()
     return array_map('intval', explode(' ', trim(fgets(STDIN))));
 }
 
+function output($_str)
+{
+    echo $_str . "\n";
+}
+
 function main()
 {
     list($_N, $_L) = getIntList();
@@ -21,7 +26,7 @@ function main()
 
     sort($_strings);
 
-    echo implode("", $_strings);
+    output(implode("", $_strings));
 }
 
 main();

@@ -5,6 +5,11 @@ function getIntList()
     return array_map('intval', explode(' ', trim(fgets(STDIN))));
 }
 
+function output($_str)
+{
+    echo $_str . "\n";
+}
+
 function main()
 {
     list($_N, $_K) = getIntList();
@@ -22,7 +27,7 @@ function main()
             $_j = intval($_j / 10);
         }
         if ($_r) {
-            echo $_i;
+            output(strval($_i));
             break;
         }
     }
