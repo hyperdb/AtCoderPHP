@@ -5,11 +5,6 @@ function getString()
     return trim(fgets(STDIN));
 }
 
-function toList($_str)
-{
-    return str_split($_str);
-}
-
 function key_proc($_key, $_buf)
 {
     if ($_key == 'B') {
@@ -30,7 +25,7 @@ function output($_str)
 
 function main()
 {
-    $_S = toList(getString());
+    $_S = str_split(getString());
 
     $_res = [];
     foreach ($_S as $_c) {
