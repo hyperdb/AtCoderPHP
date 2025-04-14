@@ -1,15 +1,15 @@
 <?php
-function getString()
+function getString(): string
 {
     return trim(fgets(STDIN));
 }
 
-function output($_str)
+function output($_str): void
 {
     echo $_str . "\n";
 }
 
-function main()
+function main(): void
 {
     $_S = getString();
     $_N = strlen($_S);

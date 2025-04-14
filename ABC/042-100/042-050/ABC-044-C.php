@@ -1,11 +1,11 @@
 <?php
 
-function getIntList()
+function getIntList(): array
 {
     return array_map('intval', explode(' ', trim(fgets(STDIN))));
 }
 
-function output($_str)
+function output($_str): void
 {
     echo $_str . "\n";
 }

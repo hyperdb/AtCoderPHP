@@ -1,16 +1,16 @@
 <?php
 
-function getInt()
+function getInt(): int
 {
     return intval(trim(fgets(STDIN)));
 }
 
-function getIntList()
+function getIntList(): array
 {
     return array_map('intval', explode(' ', trim(fgets(STDIN))));
 }
 
-function getCost($_data, $_i)
+function getCost(array $_data, int $_i): int
 {
     $_c = 0;
     foreach ($_data as $_d) {
@@ -19,12 +19,12 @@ function getCost($_data, $_i)
     return $_c;
 }
 
-function output($_str)
+function output($_str): void
 {
     echo $_str . "\n";
 }
 
-function main()
+function main(): void
 {
     $_N = getInt();
 

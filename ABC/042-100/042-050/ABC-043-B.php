@@ -1,11 +1,11 @@
 <?php
 
-function getString()
+function getString(): string
 {
     return trim(fgets(STDIN));
 }
 
-function key_proc($_key, $_buf)
+function key_proc(string $_key, array $_buf): array
 {
     if ($_key == 'B') {
         $_len = count($_buf);
@@ -18,12 +18,12 @@ function key_proc($_key, $_buf)
     return $_buf;
 }
 
-function output($_str)
+function output($_str): void
 {
     echo $_str . "\n";
 }
 
-function main()
+function main(): void
 {
     $_S = str_split(getString());
 
