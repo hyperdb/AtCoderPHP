@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * 
+ */
 function getInt(): int
 {
     return intval(trim(fgets(STDIN)));
@@ -19,11 +22,17 @@ function getCost(array $_data, int $_i): int
     return $_c;
 }
 
+/**
+ * 
+ */
 function output($_str): void
 {
     echo $_str . "\n";
 }
 
+/**
+ * 
+ */
 function main(): void
 {
     $_N = getInt();

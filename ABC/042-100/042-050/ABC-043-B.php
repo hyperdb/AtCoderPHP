@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * 
+ */
+
 function getString(): string
 {
     return trim(fgets(STDIN));
@@ -18,11 +22,17 @@ function key_proc(string $_key, array $_buf): array
     return $_buf;
 }
 
+/**
+ * 
+ */
 function output($_str): void
 {
     echo $_str . "\n";
 }
 
+/**
+ * 
+ */
 function main(): void
 {
     $_S = str_split(getString());

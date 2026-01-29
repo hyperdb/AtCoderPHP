@@ -1,15 +1,24 @@
 <?php
 
+/**
+ * 
+ */
 function getInt(): int
 {
     return intval(trim(fgets(STDIN)));
 }
 
+/**
+ * 
+ */
 function outputInt($_int): void
 {
     echo strval($_int) . "\n";
 }
 
+/**
+ * 
+ */
 function main(): void
 {
     $_a = getInt();

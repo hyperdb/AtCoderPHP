@@ -1,16 +1,25 @@
 <?php
 
+/**
+ * 
+ */
 function getString(): string
 {
     return trim(fgets(STDIN));
 }
 
 
+/**
+ * 
+ */
 function output($_str): void
 {
     echo $_str . "\n";
 }
 
+/**
+ * 
+ */
 function main(): void
 {
     $_buf = str_split(getString());

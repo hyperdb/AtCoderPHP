@@ -1,15 +1,24 @@
 <?php
 
+/**
+ * 
+ */
 function getIntList(): array
 {
     return array_map('intval', explode(' ', trim(fgets(STDIN))));
 }
 
+/**
+ * 
+ */
 function output($_str): void
 {
     echo $_str . "\n";
 }
 
+/**
+ * 
+ */
 function main()
 {
     [$_N, $_A] = getIntList();

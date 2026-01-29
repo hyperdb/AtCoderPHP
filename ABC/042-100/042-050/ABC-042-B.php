@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * 
+ */
 function getStringRow($_row_cnt): array
 {
     $_buf = [];
@@ -14,11 +17,17 @@ function getIntList(): array
     return array_map('intval', explode(' ', trim(fgets(STDIN))));
 }
 
+/**
+ * 
+ */
 function output($_str): void
 {
     echo $_str . "\n";
 }
 
+/**
+ * 
+ */
 function main(): void
 {
     list($_N, $_L) = getIntList();
